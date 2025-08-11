@@ -110,7 +110,7 @@ app.get('/', (req, res) => {
         title: 'Whitelist Subscription Plans',
         pageTitle: 'Whitelist Subscription Plans',
         description: 'Enterprise-grade gaming access with flexible subscription options designed for serious players and teams.',
-        discordLink: 'https://discord.com/channels/1402150354988306556/1403951877128851677/1404339869597044930',
+        discordLink: 'https://discord.com/channels/1402150354988306556/1404354422074642453/1404371923529367644',
         githubLink: 'https://github.com/Ar7340',
         creator: 'roster_0',
         currentYear: new Date().getFullYear(),
