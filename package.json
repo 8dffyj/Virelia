@@ -1,0 +1,31 @@
+{
+  "name": "whitelist-subscription-plans",
+  "version": "1.0.0",
+  "description": "Enterprise-grade gaming subscription plans with EJS templating",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "ejs": "^3.1.9"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "keywords": [
+    "gaming",
+    "subscription",
+    "whitelist",
+    "nodejs",
+    "express",
+    "ejs"
+  ],
+  "author": "roster_0",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
