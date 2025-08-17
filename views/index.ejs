@@ -1,137 +1,170 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %></title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/styles.css">
-</head>
-<body>
-    <!-- Professional Header -->
-    <header class="header">
-        <div class="header-content">
-            <div class="pro-badge">Professional Gaming Platform</div>
-            <h1><%= pageTitle %></h1>
-            <p><%= description %></p>
-        </div>
-    </header>
+<link rel="stylesheet" href="/css/index.css">
 
+<%- include('partials/header') %>
+
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Welcome to <span class="neon">Virelia</span></h1>
+            <p class="hero-subtitle">Experience Minecraft like never before on our premium survival server</p>
+            <div class="server-ip">
+                <span class="ip-label">Server IP:</span>
+                <span class="ip-address">play.virelia.live</span>
+                <button class="copy-btn" onclick="copyIP()">
+                    <i class="fas fa-copy"></i>
+                </button>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">100+</span>
+                    <span class="stat-label">Active Players</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">99.8%</span>
+                    <span class="stat-label">Uptime</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Support</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">1.21.8</span>
+                    <span class="stat-label">Version</span>
+                </div>
+            </div>
+            <div class="hero-buttons">
+                <a href="#features" class="btn btn-primary">
+                    <i class="fas fa-play"></i>
+                    Explore Server
+                </a>
+                <a href="#community" class="btn btn-secondary">
+                    <i class="fab fa-discord"></i>
+                    Join Discord
+                </a>
+            </div>
+        </div>
+        <div class="floating-blocks">
+            <div class="block block-1"></div>
+            <div class="block block-2"></div>
+            <div class="block block-3"></div>
+            <div class="block block-4"></div>
+            <div class="block block-5"></div>
+        </div>
+    </section>
+
+    <section class="features" id="features">
     <div class="container">
-        <!-- Solo Access Plans -->
-        <section class="section">
-            <h2 class="section-title">Solo Access</h2>
-            <p class="section-subtitle">Individual player subscriptions with premium features and dedicated support</p>
-            <div class="plans-grid">
-                <% plans.solo.forEach(function(plan) { %>
-                <div class="plan-card <%= plan.type %>">
-                    <% if (plan.discount) { %>
-                    <div class="discount-badge"><%= plan.discount %></div>
-                    <% } %>
-                    <div class="plan-content">
-                        <h3 class="plan-title"><%= plan.title %></h3>
-                        <p class="plan-subtitle"><%= plan.subtitle %></p>
-                        <div class="price-container">
-                            <div class="price"><%= plan.price %></div>
-                            <div class="duration"><%= plan.duration %></div>
-                        </div>
-                        <div class="features">
-                            <ul>
-                                <% plan.features.forEach(function(feature) { %>
-                                <li><%= feature %></li>
-                                <% }); %>
-                            </ul>
-                        </div>
-                        <a href="<%= discordLink %>" class="subscribe-btn" target="_blank">
-                            <% if (plan.type === 'bronze') { %>Get Started<% } 
-                               else if (plan.type === 'silver') { %>Choose Silver<% } 
-                               else { %>Go Premium<% } %>
-                        </a>
-                    </div>
+        <h2 class="section-title">Why Choose <span class="highlight">Virelia</span>?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon minecraft-icon">
+                    <i class="fas fa-mountain"></i>
                 </div>
-                <% }); %>
+                <h3>SMP Survival Experience</h3>
+                <p>Experience authentic survival multiplayer with custom biomes, dungeons, and challenging adventures in our immersive world.</p>
             </div>
-        </section>
-
-        <!-- Duo Access Plans -->
-        <section class="section">
-            <h2 class="section-title">Duo Access</h2>
-            <p class="section-subtitle">Perfect for gaming partners with shared features and team coordination tools</p>
-            <div class="plans-grid">
-                <% plans.duo.forEach(function(plan) { %>
-                <div class="plan-card <%= plan.type %>">
-                    <% if (plan.discount) { %>
-                    <div class="discount-badge"><%= plan.discount %></div>
-                    <% } %>
-                    <div class="plan-content">
-                        <h3 class="plan-title"><%= plan.title %></h3>
-                        <p class="plan-subtitle"><%= plan.subtitle %></p>
-                        <div class="price-container">
-                            <div class="price"><%= plan.price %></div>
-                            <div class="duration"><%= plan.duration %></div>
-                        </div>
-                        <div class="features">
-                            <ul>
-                                <% plan.features.forEach(function(feature) { %>
-                                <li><%= feature %></li>
-                                <% }); %>
-                            </ul>
-                        </div>
-                        <a href="<%= discordLink %>" class="subscribe-btn" target="_blank">
-                            <% if (plan.type === 'bronze') { %>Start Duo<% } 
-                               else if (plan.type === 'silver') { %>Choose Silver<% } 
-                               else { %>Go Premium<% } %>
-                        </a>
-                    </div>
+            <div class="feature-card">
+                <div class="feature-icon minecraft-icon">
+                    <i class="fas fa-theater-masks"></i>
                 </div>
-                <% }); %>
+                <h3>Roleplay Adventures</h3>
+                <p>Create your character's story and immerse yourself in collaborative roleplay experiences with our dedicated community.</p>
             </div>
-        </section>
-
-        <!-- Custom Subscription Calculator -->
-        <section class="section">
-            <div class="custom-section">
-                <div class="custom-content">
-                    <h2 class="custom-title">Custom Enterprise</h2>
-                    <p class="section-subtitle">Tailored solutions for teams and organizations with specific requirements</p>
-                    
-                    <div class="calculator">
-                        <div class="input-group">
-                            <label for="players">Team Size (Players):</label>
-                            <input type="number" id="players" min="1" max="50" value="1">
-                        </div>
-                        
-                        <div class="input-group">
-                            <label for="duration">Duration (Months):</label>
-                            <input type="number" id="duration" min="1" max="12" value="1">
-                        </div>
-                        
-                        <div class="price-display">
-                            <div class="calculated-price" id="calculatedPrice">$1.00</div>
-                            <div class="savings" id="savingsText"></div>
-                        </div>
-                        
-                        <a href="<%= discordLink %>" class="subscribe-btn" target="_blank">Request Enterprise Quote</a>
-                    </div>
+            <div class="feature-card">
+                <div class="feature-icon minecraft-icon">
+                    <i class="fas fa-users"></i>
                 </div>
+                <h3>Friendly Community</h3>
+                <p>Join our friendly community of builders, explorers, and adventurers. Make lasting friendships and create epic builds together.</p>
             </div>
-        </section>
-    </div>
-
-    <!-- Professional Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <p>&copy; <%= currentYear %> Game Server Whitelist. All rights reserved.</p>
-            <p class="note">Whitelist access granted within 24 hours after payment confirmation.</p>
-            <div class="footer-credits">
-                <span>Created by</span>
-                <strong><%= creator %></strong>
-                <span>•</span>
-                <a href="<%= githubLink %>" target="_blank"><%= githubLink %></a>
+            <div class="feature-card">
+                <div class="feature-icon minecraft-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Grief Protection</h3>
+                <p>Your creations are safe with our advanced land claiming system and active moderation team protecting your builds.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon minecraft-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3>Welcoming Environment</h3>
+                <p>New players are always welcome! Our community is known for being helpful, inclusive, and supportive of all skill levels.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon minecraft-icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <h3>Build Together</h3>
+                <p>Collaborate on massive projects, share building techniques, and create amazing structures in our creative and supportive community.</p>
             </div>
         </div>
-    </footer>
+    </div>
+</section>
 
-    <script src="/js/calculator.js"></script>
-</body>
-</html>
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <i class="fas fa-server"></i>
+                    <h3>Server Statistics</h3>
+                    <div class="stat-item">
+                        <span>World Size:</span>
+                        <span>5,000,000 x 5,000,000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span>Total Builds:</span>
+                        <span>15,000+</span>
+                    </div>
+                    <div class="stat-item">
+                        <span>Protected Areas:</span>
+                        <span>8,500+</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Server Performance</h3>
+                    <div class="stat-item">
+                        <span>Average TPS:</span>
+                        <span>19.8/20</span>
+                    </div>
+                    <div class="stat-item">
+                        <span>RAM Usage:</span>
+                        <span>10GB Dedicated</span>
+                    </div>
+                    <div class="stat-item">
+                        <span>Location:</span>
+                        <span>INDIA Mumbai</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="community" id="community">
+        <div class="container">
+            <h2 class="section-title">Join Our <span class="highlight">Community</span></h2>
+            <div class="community-grid">
+                <div class="community-card">
+                    <i class="fab fa-discord"></i>
+                    <h3>Discord Server</h3>
+                    <p>Chat with other players, get support, and stay updated with server news on our active Discord community.</p>
+                    <a href="#" class="btn btn-discord">Join Discord</a>
+                </div>
+                <div class="community-card">
+                    <i class="fas fa-book"></i>
+                    <h3>Wiki & Guides</h3>
+                    <p>Learn about custom features, recipes, and gameplay mechanics with our comprehensive player guides.</p>
+                    <a href="#" class="btn btn-secondary">View Wiki</a>
+                </div>
+                <div class="community-card">
+                    <i class="fas fa-camera"></i>
+                    <h3>Gallery</h3>
+                    <p>Showcase your amazing builds and explore incredible creations from our talented community members.</p>
+                    <a href="#" class="btn btn-secondary">Browse Gallery</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <%- include('partials/footer') %>

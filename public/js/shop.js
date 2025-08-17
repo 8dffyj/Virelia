@@ -54,14 +54,16 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Add event listeners
-    durationInput.addEventListener('input', calculatePrice);
-    playersInput.addEventListener('input', calculatePrice);
-
-    // Initial calculation
-    calculatePrice();
+    if (durationInput && playersInput) {
+        durationInput.addEventListener('input', calculatePrice);
+        playersInput.addEventListener('input', calculatePrice);
+        
+        // Initial calculation
+        calculatePrice();
+    }
 
     // Professional button interactions
-    const subscribeButtons = document.querySelectorAll('.subscribe-btn');
+    const subscribeButtons = document.querySelectorAll('.subscribe-btn-shop');
     subscribeButtons.forEach(button => {
         button.addEventListener('click', function(e) {
             this.style.transform = 'translateY(-2px) scale(0.98)';
@@ -71,21 +73,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Smooth scroll behavior
-    document.documentElement.style.scrollBehavior = 'smooth';
-
-    // Professional loading animation
-    const cards = document.querySelectorAll('.plan-card');
-    cards.forEach((card, index) => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(20px)';
-        setTimeout(() => {
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0)';
-        }, index * 100 + 200);
-    });
-
-    // Add professional hover effects
+    // Professional hover effects for cards
+    const cards = document.querySelectorAll('.plan-card-shop');
     cards.forEach(card => {
         card.addEventListener('mouseenter', function() {
             this.style.transition = 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)';
@@ -95,6 +84,12 @@ document.addEventListener('DOMContentLoaded', function() {
             this.style.transition = 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)';
         });
     });
+
+    // Smooth scroll behavior for shop page only
+    const shopMain = document.querySelector('.shop-main-shop');
+    if (shopMain) {
+        shopMain.style.scrollBehavior = 'smooth';
+    }
 
     // Professional intersection observer for animations
     const observerOptions = {
@@ -112,33 +107,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }, observerOptions);
 
     // Observe sections for scroll animations
-    const sections = document.querySelectorAll('.section');
+    const sections = document.querySelectorAll('.section-shop');
     sections.forEach(section => {
         observer.observe(section);
     });
-
-    // Optional: AJAX price calculation (if you want to use the API route)
-    async function calculatePriceAPI(players, duration) {
-        try {
-            const response = await fetch(`/api/calculate-price?players=${players}&duration=${duration}`);
-            const data = await response.json();
-            
-            calculatedPriceElement.textContent = `$${data.finalPrice}`;
-            
-            if (data.discount > 0) {
-                savingsTextElement.textContent = `${data.discount}% Enterprise Discount - Save $${data.savings}`;
-                savingsTextElement.style.display = 'block';
-            } else {
-                savingsTextElement.style.display = 'none';
-            }
-        } catch (error) {
-            console.error('Error calculating price:', error);
-            // Fallback to client-side calculation
-            calculatePrice();
-        }
-    }
-
-    // Uncomment the lines below if you want to use the API instead of client-side calculation
-    // durationInput.addEventListener('input', () => calculatePriceAPI(playersInput.value, durationInput.value));
-    // playersInput.addEventListener('input', () => calculatePriceAPI(playersInput.value, durationInput.value));
 });

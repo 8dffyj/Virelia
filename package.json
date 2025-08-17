@@ -1,29 +1,20 @@
 {
-  "name": "whitelist-subscription-plans",
+  "name": "game-server-website",
   "version": "1.0.0",
-  "description": "Enterprise-grade gaming subscription plans with EJS templating",
-  "main": "app.js",
+  "description": "A game server website built with Node.js, Express, and EJS",
+  "main": "server.js",
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "dependencies": {
     "express": "^4.18.2",
     "ejs": "^3.1.9"
   },
   "devDependencies": {
-    "nodemon": "^3.0.1"
+    "nodemon": "^2.0.22"
   },
-  "keywords": [
-    "gaming",
-    "subscription",
-    "whitelist",
-    "nodejs",
-    "express",
-    "ejs"
-  ],
-  "author": "roster_0",
+  "author": "Your Name",
   "license": "MIT",
   "engines": {
     "node": ">=14.0.0"
