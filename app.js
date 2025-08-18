@@ -56,6 +56,11 @@ app.get('/contact', (req, res) => {
     });
 });
 
+app.get('/ads.txt', (req, res) => {
+    res.sendFile(__dirname + '/ads.txt');
+});
+
+
 // 404 handler
 app.use((req, res) => {
     res.status(404).render('404', { 
