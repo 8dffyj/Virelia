@@ -82,26 +82,42 @@ animateBlocks();
             }
         });
 
-        // Guide.ejs
+// guide.ejs
 function copyIP() {
-  navigator.clipboard.writeText('play.virelia.live');
-  const btn = document.querySelector('.copy-btn-guide');
-  btn.innerHTML = '<i class="fas fa-check"></i>';
-  setTimeout(() => {
-    btn.innerHTML = '<i class="fas fa-copy"></i>';
-  }, 2000);
+  const serverIP = 'play.virelia.live';
+  navigator.clipboard.writeText(serverIP).then(() => {
+    const button = event.target.closest('.copy-btn-guide');
+    const originalHTML = button.innerHTML;
+    button.innerHTML = '<i class="fas fa-check"></i>';
+    button.style.background = 'linear-gradient(45deg, #00FF00, #00AA00)';
+
+    setTimeout(() => {
+      button.innerHTML = originalHTML;
+      button.style.background = 'linear-gradient(45deg, #FFD84A, #FF9C00)';
+    }, 2000);
+  });
 }
 
-        function copyToClipboard(text) {
-            navigator.clipboard.writeText(text).then(function() {
-                showNotification();
-            });
-        }
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
 
-        function showNotification() {
-            const notification = document.getElementById('copyNotification');
-            notification.classList.add('show');
-            setTimeout(() => {
-                notification.classList.remove('show');
-            }, 3000);
-        }
+// Add scroll effect to header
+window.addEventListener('scroll', () => {
+  const header = document.querySelector('.header-guide');
+  if (window.scrollY > 100) {
+    header.style.background = 'rgba(0, 0, 0, 0.95)';
+  } else {
+    header.style.background = 'rgba(26, 26, 26, 0.9)';
+  }
+});
