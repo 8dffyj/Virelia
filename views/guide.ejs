@@ -1,19 +1,20 @@
 <link rel="stylesheet" href="css/guide.css" />
 
 <%- include('partials/header') %>
- <!-- Hero Section -->
+
+     <!-- Copy Notification -->
+    <div class="copy-notification-guide" id="copyNotification">
+        <i class="fas fa-check-circle"></i>
+        <span>Copied to clipboard!</span>
+    </div>
+
+    <!-- Hero Section -->
     <section class="page-hero-guide">
         <div class="container-guide">
             <h1 class="page-title-guide">Join <span class="neon-guide">Virelia</span></h1>
             <p class="page-subtitle-guide">Your Adventure Awaits</p>
         </div>
     </section>
-
-    <!-- Copy Notification -->
-    <div class="copy-notification-guide" id="copyNotification">
-        <i class="fas fa-check-circle"></i>
-        <span>Copied to clipboard!</span>
-    </div>
 
     <!-- Main Content -->
     <section class="join-content-guide">
@@ -33,8 +34,8 @@
                                 <div class="detail-item-guide">
                                     <span class="detail-label-guide">IP:</span>
                                     <div class="detail-value-guide">
-                                        <span class="server-ip-guide">play.virelia.live</span>
-                                        <button class="copy-btn-guide" onclick="copyToClipboard('play.virelia.live')">
+                                        <span class="server-ip-guide">play.virelia.net</span>
+                                        <button class="copy-btn-guide" onclick="copyToClipboard('play.virelia.net')">
                                             <i class="fas fa-copy"></i>
                                         </button>
                                     </div>
@@ -58,8 +59,8 @@
                                 <div class="detail-item-guide">
                                     <span class="detail-label-guide">IP:</span>
                                     <div class="detail-value-guide">
-                                        <span class="server-ip-guide">play.virelia.live</span>
-                                        <button class="copy-btn-guide" onclick="copyToClipboard('play.virelia.live')">
+                                        <span class="server-ip-guide">bedrock.virelia.net</span>
+                                        <button class="copy-btn-guide" onclick="copyToClipboard('bedrock.virelia.net')">
                                             <i class="fas fa-copy"></i>
                                         </button>
                                     </div>
@@ -77,17 +78,19 @@
                         </div>
 
                         <!-- Common Server Details -->
-                        <div class="detail-item-guide">
-                            <span class="detail-label-guide">Version:</span>
-                            <span class="detail-value-guide">1.21.8</span>
-                        </div>
-                        <div class="detail-item-guide">
-                            <span class="detail-label-guide">Game Mode:</span>
-                            <span class="detail-value-guide">Survival</span>
-                        </div>
-                        <div class="detail-item-guide">
-                            <span class="detail-label-guide">Max Players:</span>
-                            <span class="detail-value-guide">100</span>
+                        <div class="server-details-guide">
+                            <div class="detail-item-guide">
+                                <span class="detail-label-guide">Version:</span>
+                                <span class="detail-value-guide">1.21+</span>
+                            </div>
+                            <div class="detail-item-guide">
+                                <span class="detail-label-guide">Game Mode:</span>
+                                <span class="detail-value-guide">Survival</span>
+                            </div>
+                            <div class="detail-item-guide">
+                                <span class="detail-label-guide">Max Players:</span>
+                                <span class="detail-value-guide">100</span>
+                            </div>
                         </div>
                     </div>
 
@@ -100,15 +103,15 @@
                             </div>
                             <div class="status-item-guide">
                                 <i class="fas fa-users"></i>
-                                <span>13/100 Players</span>
+                                <span>Active Players</span>
                             </div>
                             <div class="status-item-guide">
                                 <i class="fas fa-clock"></i>
-                                <span>Uptime: 99.9%</span>
+                                <span>24/7 Uptime</span>
                             </div>
                             <div class="status-item-guide">
                                 <i class="fas fa-wifi"></i>
-                                <span>Ping: 15ms</span>
+                                <span>Low Latency</span>
                             </div>
                         </div>
                     </div>
@@ -121,42 +124,42 @@
                             <div class="step-number-guide">1</div>
                             <div class="step-content-guide">
                                 <h3>Choose Your Edition</h3>
-                                <p>Select Java Edition (PC/Mac/Linux) or Bedrock Edition (Mobile/Console/Windows 10) and use the corresponding server details.</p>
+                                <p>Select Java Edition (PC/Mac/Linux) or Bedrock Edition (Mobile/Console/Windows 10) and use the corresponding server details above.</p>
                             </div>
                         </div>
                         <div class="step-guide">
                             <div class="step-number-guide">2</div>
                             <div class="step-content-guide">
-                                <h3>Launch Your Game Client</h3>
-                                <p>Open Minecraft and navigate to the multiplayer section.</p>
+                                <h3>Launch Minecraft</h3>
+                                <p>Open your Minecraft client and navigate to the multiplayer section.</p>
                             </div>
                         </div>
                         <div class="step-guide">
                             <div class="step-number-guide">3</div>
                             <div class="step-content-guide">
                                 <h3>Add New Server</h3>
-                                <p>Click "Add Server" or "Direct Connect" depending on your client.</p>
+                                <p>Click "Add Server" (Java) or "External Server" (Bedrock) to add our server.</p>
                             </div>
                         </div>
                         <div class="step-guide">
                             <div class="step-number-guide">4</div>
                             <div class="step-content-guide">
                                 <h3>Enter Server Details</h3>
-                                <p>Copy and paste our server IP: <code>play.virelia.live</code> and the correct port for your edition.</p>
+                                <p>Use the correct IP and port for your edition.</p>
                             </div>
                         </div>
                         <div class="step-guide">
                             <div class="step-number-guide">5</div>
                             <div class="step-content-guide">
                                 <h3>Get Your Linking Code</h3>
-                                <p>Try to connect - you'll see a code that you need to DM to our Discord bot.</p>
+                                <p>When you first try to connect, you'll receive a unique code that you need to link with Discord.</p>
                             </div>
                         </div>
                         <div class="step-guide">
                             <div class="step-number-guide">6</div>
                             <div class="step-content-guide">
                                 <h3>Connect & Play!</h3>
-                                <p>After linking your Discord, connect again and start your adventure!</p>
+                                <p>After linking your Discord account, connect again and start your adventure in Virelia!</p>
                             </div>
                         </div>
                     </div>
@@ -175,48 +178,56 @@
                         <div class="discord-step-guide">
                             <div class="discord-step-number-guide">1</div>
                             <div class="discord-step-content-guide">
-                                <h4>Join Discord Server</h4>
+                                <h4>Join Our Discord Server</h4>
+                                <p>First, join our Discord community:</p>
                                 <a href="https://discord.gg/WUyMsbyYAM" class="discord-link-guide" target="_blank">
-                                    <i class="fab fa-discord"></i> https://discord.gg/WUyMsbyYAM
+                                    <i class="fab fa-discord"></i> discord.gg/WUyMsbyYAM
                                 </a>
                             </div>
                         </div>
                         <div class="discord-step-guide">
                             <div class="discord-step-number-guide">2</div>
                             <div class="discord-step-content-guide">
-                                <h4>DM the Bot</h4>
-                                <p>Send a Direct Message to the bot <span class="bot-mention-guide">@Virelia</span></p>
-                                <p>Include <strong>only the code</strong> shown when you try to join the Minecraft server:</p>
+                                <h4>Get Your Linking Code</h4>
+                                <p>Attempt to join the Minecraft server. You'll be shown a linking code that looks like this:</p>
                                 <div class="code-example-guide">
-                                    <code>EX 2166</code>
-                                    <span class="code-note-guide">(Example - use your actual code)</span>
+                                    <code>ABC 1234</code>
+                                    <span class="code-note-guide">(Example - your code will be different)</span>
                                 </div>
                             </div>
                         </div>
                         <div class="discord-step-guide">
                             <div class="discord-step-number-guide">3</div>
                             <div class="discord-step-content-guide">
-                                <h4>Confirmation</h4>
-                                <p>You'll receive a confirmation message once linked successfully!</p>
+                                <h4>DM the Bot</h4>
+                                <p>Send a Direct Message to <span class="bot-mention-guide">@Virelia</span> bot with your linking code.</p>
+                                <p><strong>Important:</strong> Send only the code, nothing else!</p>
+                            </div>
+                        </div>
+                        <div class="discord-step-guide">
+                            <div class="discord-step-number-guide">4</div>
+                            <div class="discord-step-content-guide">
+                                <h4>Confirmation & Play</h4>
+                                <p>Once successfully linked, you'll receive a confirmation message. You can now join the server!</p>
                             </div>
                         </div>
                     </div>
                     <div class="discord-help-guide">
                         <i class="fas fa-question-circle"></i>
-                        <span>Need help? Ask in the <strong>#support</strong> channel on Discord</span>
+                        <span>Need help? Ask in the <strong>#support</strong> channel on Discord or contact our moderators!</span>
                     </div>
                 </div>
             </div>
 
             <div class="join-cta-guide">
-                <h2>Ready to Join?</h2>
-                <p>Remember to link your Discord account first! Our friendly community is here to help.</p>
+                <h2>Ready to Start Your Journey?</h2>
+                <p>Join thousands of players in the ultimate Minecraft survival experience. Remember to link your Discord first!</p>
                 <div class="cta-buttons-guide">
-                    <a href="https://discord.gg/WUyMsbyYAM" class="btn-guide btn-primary-guide">
+                    <a href="https://discord.gg/WUyMsbyYAM" class="btn-guide btn-primary-guide" target="_blank">
                         <i class="fab fa-discord"></i> Join Discord First
                     </a>
-                    <a href="/contact" class="btn-guide btn-secondary-guide">
-                        <i class="fas fa-headset"></i> Get Help
+                    <a href="#" class="btn-guide btn-secondary-guide">
+                        <i class="fas fa-question-circle"></i> Get Support
                     </a>
                 </div>
             </div>
