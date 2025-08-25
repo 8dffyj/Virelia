@@ -1,171 +1,226 @@
 <link rel="stylesheet" href="css/guide.css" />
 
 <%- include('partials/header') %>
+ <!-- Hero Section -->
+    <section class="page-hero-guide">
+        <div class="container-guide">
+            <h1 class="page-title-guide">Join <span class="neon-guide">Virelia</span></h1>
+            <p class="page-subtitle-guide">Your Adventure Awaits</p>
+        </div>
+    </section>
 
-<!-- Main Content -->
-<section class="join-content-guide">
-  <div class="container-guide">
-
-    <div class="join-grid-guide">
-      <div class="server-info-guide">
-        <div class="info-card-guide">
-          <h2><i class="fas fa-server"></i> Server Information</h2>
-          <div class="server-details-guide">
-            <div class="detail-item-guide">
-              <span class="detail-label-guide">Server IP:</span>
-              <span class="detail-value-guide server-ip-guide"
-                >play.virelia.live</span
-              >
-              <button class="copy-btn-guide" onclick="copyIP()">
-                <i class="fas fa-copy"></i>
-              </button>
-            </div>
-            <div class="detail-item-guide">
-              <span class="detail-label-guide">Port:</span>
-              <span class="detail-value-guide">25570</span>
-            </div>
-            <div class="detail-item-guide">
-              <span class="detail-label-guide">Version:</span>
-              <span class="detail-value-guide">1.21.8</span>
-            </div>
-            <div class="detail-item-guide">
-              <span class="detail-label-guide">Game Mode:</span>
-              <span class="detail-value-guide">Survival</span>
-            </div>
-            <div class="detail-item-guide">
-              <span class="detail-label-guide">Max Players:</span>
-              <span class="detail-value-guide">30</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="info-card-guide">
-          <h2><i class="fas fa-chart-line"></i> Server Status</h2>
-          <div class="status-grid-guide">
-            <div class="status-item-guide online-guide">
-              <i class="fas fa-circle"></i>
-              <span>Online</span>
-            </div>
-            <div class="status-item-guide">
-              <i class="fas fa-users"></i>
-              <span>10/30 Players</span>
-            </div>
-            <div class="status-item-guide">
-              <i class="fas fa-clock"></i>
-              <span>Uptime: 99.9%</span>
-            </div>
-            <div class="status-item-guide">
-              <i class="fas fa-wifi"></i>
-              <span>Ping: 15ms</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="join-steps-guide">
-        <h2><i class="fas fa-list-ol"></i> How to Join</h2>
-        <div class="steps-container-guide">
-          <div class="step-guide">
-            <div class="step-number-guide">1</div>
-            <div class="step-content-guide">
-              <h3>Launch Your Game Client</h3>
-              <p>Open your game and navigate to the multiplayer section.</p>
-            </div>
-          </div>
-          <div class="step-guide">
-            <div class="step-number-guide">2</div>
-            <div class="step-content-guide">
-              <h3>Add New Server</h3>
-              <p>
-                Click "Add Server" or "Direct Connect" depending on your client.
-              </p>
-            </div>
-          </div>
-          <div class="step-guide">
-            <div class="step-number-guide">3</div>
-            <div class="step-content-guide">
-              <h3>Enter Server Details</h3>
-              <p>
-                Copy and paste our server IP:
-                <code>play.virelia.live</code>
-              </p>
-            </div>
-          </div>
-          <div class="step-guide">
-            <div class="step-number-guide">4</div>
-            <div class="step-content-guide">
-              <h3>Get Your Linking Code</h3>
-              <p>Try to connect - you'll see a code that you need to DM to our Discord bot.</p>
-            </div>
-          </div>
-          <div class="step-guide">
-            <div class="step-number-guide">5</div>
-            <div class="step-content-guide">
-              <h3>Connect & Play!</h3>
-              <p>After linking your Discord, connect again and start your adventure!</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-     <!-- Discord Linking Section - New Addition -->
-    <div class="discord-section-guide">
-      <div class="info-card-guide discord-card-guide">
-        <h2><i class="fab fa-discord"></i> Required: Link Your Discord Account</h2>
-        <div class="discord-warning-guide">
-          <i class="fas fa-exclamation-triangle"></i>
-          <span>You must link your Discord account before joining the server!</span>
-        </div>
-        <div class="discord-steps-guide">
-          <div class="discord-step-guide">
-            <div class="discord-step-number-guide">1</div>
-            <div class="discord-step-content-guide">
-              <h4>Join Discord Server</h4>
-              <a href="https://discord.gg/WUyMsbyYAM" class="discord-link-guide" target="_blank">
-                <i class="fab fa-discord"></i> https://discord.gg/WUyMsbyYAM
-              </a>
-            </div>
-          </div>
-          <div class="discord-step-guide">
-            <div class="discord-step-number-guide">2</div>
-            <div class="discord-step-content-guide">
-              <h4>DM the Bot</h4>
-              <p>Send a Direct Message to the bot <span class="bot-mention-guide">@Virelia</span></p>
-              <p>Include <strong>only the code</strong> shown when you try to join the Minecraft server:</p>
-              <div class="code-example-guide">
-                <code>EX 2166</code>
-                <span class="code-note-guide">(Example - use your actual code)</span>
-              </div>
-            </div>
-          </div>
-          <div class="discord-step-guide">
-            <div class="discord-step-number-guide">3</div>
-            <div class="discord-step-content-guide">
-              <h4>Confirmation</h4>
-              <p>You'll receive a confirmation message once linked successfully!</p>
-            </div>
-          </div>
-        </div>
-        <div class="discord-help-guide">
-          <i class="fas fa-question-circle"></i>
-          <span>Need help? Ask in the <strong>#support</strong> channel on Discord</span>
-        </div>
-      </div>
+    <!-- Copy Notification -->
+    <div class="copy-notification-guide" id="copyNotification">
+        <i class="fas fa-check-circle"></i>
+        <span>Copied to clipboard!</span>
     </div>
 
-    <div class="join-cta-guide">
-      <h2>Ready to Join?</h2>
-      <p>Remember to link your Discord account first! Our friendly community is here to help.</p>
-      <div class="cta-buttons-guide">
-        <a href="https://discord.gg/WUyMsbyYAM" class="btn-guide btn-primary-guide">
-          <i class="fab fa-discord"></i> Join Discord First
-        </a>
-        <a href="/contact" class="btn-guide btn-secondary-guide">
-          <i class="fas fa-headset"></i> Get Help
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
+    <!-- Main Content -->
+    <section class="join-content-guide">
+        <div class="container-guide">
+            <div class="join-grid-guide">
+                <div class="server-info-guide">
+                    <div class="info-card-guide">
+                        <h2><i class="fas fa-server"></i> Server Information</h2>
+                        
+                        <!-- Edition Cards -->
+                        <div class="edition-cards-guide">
+                            <!-- Java Edition -->
+                            <div class="edition-card-guide">
+                                <div class="edition-title-guide">
+                                    <i class="fas fa-coffee"></i> Java Edition
+                                </div>
+                                <div class="detail-item-guide">
+                                    <span class="detail-label-guide">IP:</span>
+                                    <div class="detail-value-guide">
+                                        <span class="server-ip-guide">play.virelia.live</span>
+                                        <button class="copy-btn-guide" onclick="copyToClipboard('play.virelia.live')">
+                                            <i class="fas fa-copy"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="detail-item-guide">
+                                    <span class="detail-label-guide">Port:</span>
+                                    <div class="detail-value-guide">
+                                        <span>25570</span>
+                                        <button class="copy-btn-guide" onclick="copyToClipboard('25570')">
+                                            <i class="fas fa-copy"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Bedrock Edition -->
+                            <div class="edition-card-guide">
+                                <div class="edition-title-guide">
+                                    <i class="fas fa-mobile-alt"></i> Bedrock Edition
+                                </div>
+                                <div class="detail-item-guide">
+                                    <span class="detail-label-guide">IP:</span>
+                                    <div class="detail-value-guide">
+                                        <span class="server-ip-guide">play.virelia.live</span>
+                                        <button class="copy-btn-guide" onclick="copyToClipboard('play.virelia.live')">
+                                            <i class="fas fa-copy"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="detail-item-guide">
+                                    <span class="detail-label-guide">Port:</span>
+                                    <div class="detail-value-guide">
+                                        <span>6039</span>
+                                        <button class="copy-btn-guide" onclick="copyToClipboard('6039')">
+                                            <i class="fas fa-copy"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Common Server Details -->
+                        <div class="detail-item-guide">
+                            <span class="detail-label-guide">Version:</span>
+                            <span class="detail-value-guide">1.21.8</span>
+                        </div>
+                        <div class="detail-item-guide">
+                            <span class="detail-label-guide">Game Mode:</span>
+                            <span class="detail-value-guide">Survival</span>
+                        </div>
+                        <div class="detail-item-guide">
+                            <span class="detail-label-guide">Max Players:</span>
+                            <span class="detail-value-guide">30</span>
+                        </div>
+                    </div>
+
+                    <div class="info-card-guide">
+                        <h2><i class="fas fa-chart-line"></i> Server Status</h2>
+                        <div class="status-grid-guide">
+                            <div class="status-item-guide online-guide">
+                                <i class="fas fa-circle"></i>
+                                <span>Online</span>
+                            </div>
+                            <div class="status-item-guide">
+                                <i class="fas fa-users"></i>
+                                <span>10/30 Players</span>
+                            </div>
+                            <div class="status-item-guide">
+                                <i class="fas fa-clock"></i>
+                                <span>Uptime: 99.9%</span>
+                            </div>
+                            <div class="status-item-guide">
+                                <i class="fas fa-wifi"></i>
+                                <span>Ping: 15ms</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="join-steps-guide">
+                    <h2><i class="fas fa-list-ol"></i> How to Join</h2>
+                    <div class="steps-container-guide">
+                        <div class="step-guide">
+                            <div class="step-number-guide">1</div>
+                            <div class="step-content-guide">
+                                <h3>Choose Your Edition</h3>
+                                <p>Select Java Edition (PC/Mac/Linux) or Bedrock Edition (Mobile/Console/Windows 10) and use the corresponding server details.</p>
+                            </div>
+                        </div>
+                        <div class="step-guide">
+                            <div class="step-number-guide">2</div>
+                            <div class="step-content-guide">
+                                <h3>Launch Your Game Client</h3>
+                                <p>Open Minecraft and navigate to the multiplayer section.</p>
+                            </div>
+                        </div>
+                        <div class="step-guide">
+                            <div class="step-number-guide">3</div>
+                            <div class="step-content-guide">
+                                <h3>Add New Server</h3>
+                                <p>Click "Add Server" or "Direct Connect" depending on your client.</p>
+                            </div>
+                        </div>
+                        <div class="step-guide">
+                            <div class="step-number-guide">4</div>
+                            <div class="step-content-guide">
+                                <h3>Enter Server Details</h3>
+                                <p>Copy and paste our server IP: <code>play.virelia.live</code> and the correct port for your edition.</p>
+                            </div>
+                        </div>
+                        <div class="step-guide">
+                            <div class="step-number-guide">5</div>
+                            <div class="step-content-guide">
+                                <h3>Get Your Linking Code</h3>
+                                <p>Try to connect - you'll see a code that you need to DM to our Discord bot.</p>
+                            </div>
+                        </div>
+                        <div class="step-guide">
+                            <div class="step-number-guide">6</div>
+                            <div class="step-content-guide">
+                                <h3>Connect & Play!</h3>
+                                <p>After linking your Discord, connect again and start your adventure!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Discord Linking Section -->
+            <div class="discord-section-guide">
+                <div class="info-card-guide discord-card-guide">
+                    <h2><i class="fab fa-discord"></i> Required: Link Your Discord Account</h2>
+                    <div class="discord-warning-guide">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <span>You must link your Discord account before joining the server!</span>
+                    </div>
+                    <div class="discord-steps-guide">
+                        <div class="discord-step-guide">
+                            <div class="discord-step-number-guide">1</div>
+                            <div class="discord-step-content-guide">
+                                <h4>Join Discord Server</h4>
+                                <a href="https://discord.gg/WUyMsbyYAM" class="discord-link-guide" target="_blank">
+                                    <i class="fab fa-discord"></i> https://discord.gg/WUyMsbyYAM
+                                </a>
+                            </div>
+                        </div>
+                        <div class="discord-step-guide">
+                            <div class="discord-step-number-guide">2</div>
+                            <div class="discord-step-content-guide">
+                                <h4>DM the Bot</h4>
+                                <p>Send a Direct Message to the bot <span class="bot-mention-guide">@Virelia</span></p>
+                                <p>Include <strong>only the code</strong> shown when you try to join the Minecraft server:</p>
+                                <div class="code-example-guide">
+                                    <code>EX 2166</code>
+                                    <span class="code-note-guide">(Example - use your actual code)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="discord-step-guide">
+                            <div class="discord-step-number-guide">3</div>
+                            <div class="discord-step-content-guide">
+                                <h4>Confirmation</h4>
+                                <p>You'll receive a confirmation message once linked successfully!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="discord-help-guide">
+                        <i class="fas fa-question-circle"></i>
+                        <span>Need help? Ask in the <strong>#support</strong> channel on Discord</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="join-cta-guide">
+                <h2>Ready to Join?</h2>
+                <p>Remember to link your Discord account first! Our friendly community is here to help.</p>
+                <div class="cta-buttons-guide">
+                    <a href="https://discord.gg/WUyMsbyYAM" class="btn-guide btn-primary-guide">
+                        <i class="fab fa-discord"></i> Join Discord First
+                    </a>
+                    <a href="/contact" class="btn-guide btn-secondary-guide">
+                        <i class="fas fa-headset"></i> Get Help
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
 <%- include('partials/footer') %>
