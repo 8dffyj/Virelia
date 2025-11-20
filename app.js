@@ -36,18 +36,18 @@ app.get('/guide', (req, res) => {
     });
 });
 
-// Alternative shop route
-app.get('/shop', (req, res) => {
-    res.render('shop', {
-        title: 'Virelia Gaming - Premium Server Access',
-        pageTitle: 'Virelia Premium Access', 
-        description: 'Join our exclusive gaming community with premium server access, advanced features, and dedicated support.',
-        discordLink: 'https://discord.gg/yourserver',
-        currentYear: new Date().getFullYear(),
-        creator: 'Virelia Team',
-        githubLink: 'https://github.com/yourusername/virelia'
-    });
-});
+// // Alternative shop route
+// app.get('/shop', (req, res) => {
+//     res.render('shop', {
+//         title: 'Virelia Gaming - Premium Server Access',
+//         pageTitle: 'Virelia Premium Access', 
+//         description: 'Join our exclusive gaming community with premium server access, advanced features, and dedicated support.',
+//         discordLink: 'https://discord.gg/yourserver',
+//         currentYear: new Date().getFullYear(),
+//         creator: 'Virelia Team',
+//         githubLink: 'https://github.com/yourusername/virelia'
+//     });
+// });
 
 app.get('/contact', (req, res) => {
     res.render('contact', { 
