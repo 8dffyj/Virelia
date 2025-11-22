@@ -56,6 +56,13 @@ app.get('/contact', (req, res) => {
     });
 });
 
+app.get('/privacypolicy', (req, res) => {
+    res.render('privacypolicy', { 
+        title: 'PrivacyPolicy - Virelia',
+        page: 'PrivacyPolicy'
+    });
+});
+
 app.get('/ads.txt', (req, res) => {
     res.sendFile(__dirname + '/ads.txt');
 });
