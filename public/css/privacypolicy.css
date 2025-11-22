@@ -1,6 +1,20 @@
 /* =====================================================
-   PRIVACY POLICY STYLES - virelia.live
+   VARIABLES
    ===================================================== */
+:root {
+    --primary-color: #FF9C00;
+    --secondary-color: #FFD84A;
+    --accent-color: #FF7700;
+    --dark-bg: #000000;
+    --darker-bg: #000000;
+    --card-bg: #1a1a1a;
+    --text-primary: #ffffff;
+    --text-secondary: #cccccc;
+    --neon-orange: #FF9C00;
+    --minecraft-brown: #8b4513;
+    --minecraft-stone: #7f7f7f;
+    --gradient-primary: linear-gradient(45deg, #FFD84A, #FF9C00);
+}
 
 /* =====================================================
    BACKGROUND EFFECTS
@@ -29,8 +43,8 @@
 
 @keyframes privacypolicy-float {
   0% { transform: translateY(100vh) scale(0); opacity: 0; }
-  10% { opacity: 0.6; transform: scale(1); }
-  90% { opacity: 0.6; }
+  10% { opacity: 0.6; transform: translateY(85vh) scale(1); }
+  90% { opacity: 0.6; transform: translateY(15vh) scale(1); }
   100% { transform: translateY(-100vh) scale(0); opacity: 0; }
 }
 
@@ -109,6 +123,7 @@
   right: 0;
   height: 4px;
   background: var(--gradient-primary);
+  background-size: 200% 100%;
   animation: privacypolicy-shimmer 2s infinite;
 }
 
@@ -334,8 +349,6 @@
   margin-bottom: 25px;
   border: 1px solid rgba(255, 156, 0, 0.1);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  opacity: 0;
-  transform: translateY(30px);
   animation: privacypolicy-revealSection 0.6s ease-out forwards;
   position: relative;
   overflow: hidden;
@@ -369,6 +382,7 @@
 .privacypolicy-section:nth-child(13) { animation-delay: 0.7s; }
 
 @keyframes privacypolicy-revealSection {
+  from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
